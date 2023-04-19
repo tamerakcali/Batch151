@@ -1,0 +1,443 @@
+Task:
+STRING METHODS
+1-toUpperCase():a-Tum harfleri buyuk harfe cevirir.
+                b-Bize String bir data dondurur.
+
+2-toLowerCase():a-tum harfleri kucuk harfe dondurur.
+                b-bize String return eder.
+
+3-charAt(0):a-bize datadaki ilk karakteri dondurur.
+            b-index ile calisir.
+            c-saymaya sifirdan baslar.
+
+4-Lenght() methodu:a- bir datadaki karakter sayisini verir ve int bir deger return eder.
+                   b-saymaya birden baslar.
+
+
+5-Substring()methodu:a-baslangic indexi ve bitis indexi
+                     verilirse,yani iki rakam yazarsak,baslangic indexi dahil, bitis indexi haric yazdirir.
+
+                     b-Datanin herhangi bir noktasindan(ortasi, basi vb.) data almamizi saglar.
+
+                     c-baslangic indexi, tek rakam verilmisse  String in verilen indexten sonuna kadarki datalarini alir.
+
+6-a.contains methodu:a-bir data var mi yok mu onu check eder, dolayisiyla boolean bir deger return eder.
+                     b-boolean return eder
+
+7-startsWith methodu:a-metnin bas kisminin istenilen (dizi ve ya daha fazla karakter) ile eslesip eslesmedigini kontrol eder
+                     b-sonucu boolean verir.yani istenilen karakter(harf veya sembol v.s.) ile basliyor mu baslamaiyormu
+
+8-endsWith() methodu:a-Metnin belirli bir data ile bitip bitmedigini gosterir.
+                     b-boolean data return eder.
+
+9-s.replace() methodu:a-this replaces a String with other given String.
+                      b-This returns String
+                      c-This method is  used deleting a char or String data.
+                      d-is used single character or multi-character both.
+                      e-her iki karakter shoud be char or string. Yani biri char biri String ile calismaz.
+
+10-s.replaceAll([]) methodu:a-this method is used replacing a couple of datas.
+                          bir grup data:Regular Expression(Regex).
+                          b- en cok kullanilan regex ler.
+                          c-tum rakamlar dedigimiz:[0-9] a kadarki sayilari gireriz.
+                          d-tum kucuk harfler     :[a-z]
+                          e-tum buyuk harfler     :[A-Z]
+                          f-tum harfler           :[a-zA-Z]
+                          h-tum harfler ve tum rakamlar:[a-zA-Z0-9]
+                          g-tum buyuk ve kucuk sesli harfler     :[aeiouAEOUI]
+                          j-tum noktalama isaretleri:[\\p{Punct}]
+                          k-Tum bunlarin haricinde icin:[^] ornegin
+                          tum harfler haricinde derken:[^a-zA-Z] seklinde yazilir.
+
+ NOTE: We can not use char data for this method,because, "" tirnak isareti
+        ici bos ise buna hiclik denir.
+
+ 11-replaceFirst() methodu: Replace methodu ile ayni functional a sahip,
+                   ancak istenilen ilk gordugu  datayi degistirir,digerlerine dokunmaz.
+
+12-trim() methodu: String bir datanin onunde ve sonunda bulunan space' leri siler.
+
+13-valueOf() methodu:Bize string olan bir datayi,yani toplama vs. math islemi yapabilmek icin,
+             numerik yani int,double,vs. gibi bir dataya cevirir.
+
+14-spilit()methodu:birden fazla String datalari ayirmak icin kullanilir.
+          Ilk kisim 0 digerleri 1 ve devam eder.
+
+15-[\\p{Punct} :sembolleri silmek icin kullanilir.
+
+16-isEmpty() methodu: Data da bir karakterin olup olmadigini kontrol etmek icin kullanilir.
+                      -boolean return eder.
+
+17-isBlank() methodu:a-string bir data da "space" + "hiclik" icin
+                       true return eder. Yani isEmpty() den farkli olarak "space" i
+                       yani boslugu da hiclik sayar ve bos der.
+                     b-isEmpty methodu "space" i karakter olarak gordugu icin false doner.
+
+18-indexOf() methodu: Verilen karakter veya karakterlerin ilk gorunumunun indexini verir.
+                      - Tekli karakter icinde coklu karakter icinde kullanilabilir.
+                       -coklu datalarda string ifadenin ilk gorunumunun ilk indexini return eder.
+                       -olmayan bir data sorarsak "-1" olarak return eder.
+
+ 19-lastIndexOf() methodu:verilen bir data da karakter ya da karakterlerin
+                          son gorunumunun indexlerini verir.
+
+20-Math.abs()methodu: eksi olarak verilen bir sayiyi pozitif yapar.
+
+21-switch() methodu: a-bu method ile string,int,byte,short ve char da kullanilabilir.
+                     b-boolean,float,double,long bu method ile kullanilamaz.
+
+22-increment() methodu:a- age=age+1;
+                       b- age += 1; arti ile esit arasinda space olmaz.
+                       c- age++; bu method sadece  1 increment lerde kullanilir.
+
+ 23-decrement() methodu:decremet method daki ayni kurallar vardir.
+
+ 24-loops yapisi: tekrar gerektiren code yazmalarda bu yapi kullanilir.
+                   a-for-loop
+                   b-while-loop
+                   c-do-while-loop
+                   d-for-each-loop 4 tane loops vardir.
+                   e-her loop methodunda increment veya decrement vardir.
+
+25-break ve continue arasindaki farklar=bunlar birer keyword dur.
+                a-break switch in disina cikmak icin ve loop u kirmak icin kullanilir.
+                b-continue ise loop yaparken bazi karakterleri isleme sokmamak icin kullanilir.
+
+26-arrays blocku:a-Coklu ayni data tipinde data depolamak icin Javanin olusturdugu bir yapidir.
+                 b-length methodu array de variable olarak kullanilir,
+                 string lerde method olarak
+                 kullanildigi icin array de parantez kullanilmaz.
+                 c-array de index kullanildigi icin degerler "0" dan baslar
+                 d-array ler primitive data types veya reference ile calisir.
+                 yani String lerin reference(adress) lerini kullanir.
+                 e-array ler cok hizlidir ve memory de az yer kaplar.
+
+27-for-each(enhanced) a-yapisi:mumkunse hep bu yolu kullanmaliyiz,yoksa digerlerini.
+                      b-bu yapi hep bastan baslar sonuna kadar giderek calisir.
+                      c-bu yapi array ile kullanilir.
+
+NOTE:app lerde data ile data lari isleyen code lara(logic) biribirinden ayrilir.
+        dataya bagimli code lara "hard code" denir ve hatali code olarak adlandirilir.
+        Cunku array e bir eleman eklendiginde, code yanlis calisir, ama grades.length-1
+        kullanirsak, data uzatildigi ya da baska bir sekilde degistirildiginde yine calisir.
+
+ NOTE:Arrays.sort() methodu numerikleri kucukten buyuge(ascending),
+                   String datalari ise  alfabetik siraya gore dizer(alphabetically)
+                   ascending +alphabetically ==> natural order denir.
+
+28-binarySearch() methodu:a-sort() methodu kullanmadan kullanilmaz
+                          b-var olan elemanlar icin size o elemanin indexini yani int deger verir
+                          c-bu method ile aldigimiz index 0 veya 0 dan buyukse bu eleman
+                           o array de var demektir.
+                          d-bu method ile "-" alinirsa o eleman o array de yok demektir.
+                          e- "-" yaninda  verilen sayi ise, eger eleman olsaydi onun
+                          bulunan elemanlara gore yerini yani kacinci sirada
+                          olacagini belirtir.
+                              yani sira numarasini verir.ornegin a b c d f d  l
+                               harfi olmadigi icin alfabededki - sirasini yazar.
+
+29-MultiDimensionalArray:a-bir array in icine eleman olarak birden fazla array koyulabilir.
+                           bu array lere
+                           denir.
+                         b-bir array in elemanlarida array olursa,bunlara multidimensionalarray
+                          denir
+                         c-multidimensionalarray leri consol ayzdirmak icin toString methodu
+                           degil deep.toString methodu kullanilir.
+                         d-multidimensionalarray icerisinden specific bir eleman nasil yazdirilir.
+                         e-system.out.println(string ismi[][]) bu koseli parantezler icerisine
+                          istedigimiz elemanin
+                         indexini yazarak yazdirma yapariz.
+
+30-Java passByValue kullanir:a-yani Java method larin orjinal degeri degistirmesine izin vermez.
+                             c-bunu methodlara deger yollarken, orjinal degerin kopyasini olusturur ve onu methoda yollar. dolayisiyla
+                               method, kopya uzerinde degisiklik yapar.
+                             d-Java esnek bir dildir. isterseniz yazdiginiz code ile orjinal degeri degis-
+                             mesini temin edebilirsiniz.
+ 31-passbyReference: bu yapida methoda reference gonderilir.Reference adress demektir. Adres
+                     gonderilirse orjinal degere ulasilir ve orjinal deger degistirilir.Bu yuzden
+                     "C#" (Csharp) gibi pass by reference kullanan dillerde method variable in orjinal
+                     degerini degistirir.
+32-Constructor:a-gorulmezler
+               b-parametreleri yoktur,yani parantez kullanilmaz.
+               c-body leri bostur,yani{}.
+               d-default constructor u manuel yazdigimizda, java default constructor u kullandirmaz.
+ 33-Runner class:tek bir main method kullanmak icin farkli farkli calass lar icin runner class ile
+                 hepsini bir main method ile calistirabiliriz.
+
+ 34-  constructor nasil olusturulur:
+        1-Access modifier
+        2-Class name
+        3-Paranteses
+        4-Curly braces ==> access modofier + class name +() +{}
+  methodlar ile farki:
+         1-Methodlarda return type vardir, constructor ler de olmaz
+         2-"Method"lar yaptiklari ise gore isimlendirilirler,constructorlar her zaman class ismi ile
+           adlandirilirlar.
+         3-"Method" lar bir action yapmak icin olusturulur,consturctor lar ise object olusturmak icindir.
+            Yani constructor lar sadece object olusturur.
+         4- Method lar kucuk harfle baslar, constructor isimleri class ismiyle ayni oldugu icin buyuk harfle baslar.
+         5-Static class members cagirmak icin object olusturmak gerekmez ve tavsiye edilmez.
+         6-ancak non-static classes(members) cagirmak icin object olusturmak sarttir.
+         7-Method larda da ayni kural gecerlidir.
+         8-static variables e object uzerinden de ulasabiliriz ama bu hatadir.
+
+NOTE:1-Static "class members" (variable +method +constructor + code blocks) tum objects
+    tarafindan paylasilir.
+     2-Static class members daki degisiklikler, tum objects tarafindan otomatik olarak gorulur
+
+35-Static ve non-static blocks:1-static blocks, static variables a ilk degerlerini assign(initialize) icin kullanilir.
+                               2-non-static block, constructor larda calistirilmasi gereken ortak code lari icerir
+                               3-non-static block icine yazilan code lar her constructor icin calistirilir.
+
+36-MethodOverLoading(): ayni isim ile farkli parametrelerle islem yaptirmaya denir.
+                      ayni methodu farkli parametrelerle kullanmaya overloading method denir.
+                              2- Method overloading javada iyi organizasyon icin onemlidir.
+                              3-parametre 3 sekilde degistirilebilir.
+                              a-parametrelerin sayilari degistirilebilir.
+                              b-parametrelerin data typleri degistirebilirsiniz.
+                              c-parametrelerin farkli ise,data type lerin yerleri degistirilebilir.
+                              d-methodoverloading bir class in icinde olusur.bu yuzden private methods da
+                              overload edilebilir.cunku class icinde olusturulur.dolayisiyla tum access
+                              modifierlerde kullanilabilir.
+
+37-ArrayList: ayni data type ndeki datalari depolamak icin array kullaniriz.ancak array lerin
+              negatif bir yonu vardir, icine koyacagimiz eleman sayisini en basta belirlemek gerekir. bu code
+              static yapmaz.yani ne kadar istersek o kadar artirabilmeli ve azaltabilmeliyiz.bu yuzden Java yeni
+              bir yapi olusturmustur. buna "ArrayList" denir.Bu yapi eleman sayisinda esnektir. Hic eleman koymaz-
+              sak  "0" olarak ayarlar.1000 eleman koyarsaniz eleman sayisini 1000 e gore ayarlar. Java
+              arrays i iptal etmedi,cunku;
+              a- arrays hizlidir
+              b-arrays memory de az yer kaplarlar.Cunku primitiv data type ve reference(yani string non-primitive
+              datalarin reference sini alir)lari depolayabilir.Reference stack memory de oldugu icin.
+              e-"ArrayList" non-primitive data type lerini depolar. Bu nedenle arraylist arraylerden daha cok yer kaplar.
+              f-daha yavastirlar.
+
+NOTE:1-ArrayList lerde string class kullanmak tercih edilir,cunku string class method acisindan cok zengindir.
+     2-List.of() kullanarak kisa yoldan list olusturabilirsiniz,ama bu list in elemanlari degistirilemez.
+     3-Bu list lere yeni eleman eklenemez.
+     4-Bu list lerden eleman da silinemez.
+
+ NOTE:Arrays used by primitive datas
+      ArrayLists used by non-primitive datas.
+
+ LINKEDLIST:
+ 1) ArrayList ler eleman silme ve eleman eklemede basarisizdirlar
+        o yuzden eleman silme ve ekleme islemlir coklukla yapilacaksa Arraylist kullanmak tavsiye edilmez
+     2) LinkedListler index kullanmadiklarindan dolayi eleman silme ve eklemede re-index yapilamasina gerek yoktur.
+        Bu da Linkedlistlerin eleman ekleme ve silmede cok basarili hale getirir.
+        Bu yuzden eleman ekleme ve silmenin cok yapilmasi gereken durumlarda Linklist kullanmak tavsiye edilir
+     3) ArrayListlerde "search" islemi kolay yapilir cunku indexler adres gibidir.
+     4) Linkedlistlerde search islemi zor yapilir cunku LinkedListler index kullanmmaz.
+        index kullanmayinca herhangi bir elemani bulmak icin en bastan tum elemanlar kontrol edilir
+        bu da cok fazla is demektir.
+
+
+
+ 38-OBJECT ORIENTED PROGRAMMING LANGUAGE(OOPL) PRINCIPLES OF JAVA:
+ A) INHERITANCE:da object olustururken constructor'lar yukaridan(Parent)
+             asagiya(Child) dogru calisir.
+          a)Parent ve Super es anlamlidir, Child ve Sub es anlamlidir.
+          b)super() her constructor'in ilk satirinda gorunmez olarak bulunur.
+            Isterseniz gorunur sekilde de yazabilirsiniz
+          c)super() sizi parant class'daki constructor'a tasir.
+          d)this() sizi ayni class icindeki constructor'lar arasinda gezdirir.
+          e)"this()" icinde bulundugunuz variable'lari cagirmaya yarar
+            "super()" parent class'daki variable'lari cagirmaya yarar
+          f-Parent ten Child a HAS-A ilişkisi var. yukarıdan aşağıya yani.
+      Animal-Mammal-Cat-Van Cat
+      Animal has a cat, mammal a van cat, cat has a van cat
+      Child dan parent a IS-A ilişkisi vardır.
+      Cat is a animal, van cat is a mammal, mammal is a animal,
+      eğer data tipleri arasında IS-A ve HAS-A ilişkisi varsa bu data tiplerine COVARIANT denir.
+
+
+  B-POLYMORPHISM==> Coklu sekil
+            1) Parent Classdaki methodu Child class icinde ozellestirerek kullanmaya overriding yapmak denir
+                  2) Overriding de methodun parantezine ve methodu ismine dokunulmaz, (==>Method signature)
+                  3) private methodlar override edilemezler
+                  4) Child classdaki methodun acces modifieri parent tan daha dar olamaz
+                  5)Child class da override edilen methodun return tye i ile Parent taki methodun return type i arasinda
+                  IS-A iliskisi varsa return type degistirelebilir
+                  6)Methodun return type i primitive ise Overriding yaparken primitive type degistirilemez. Cunku return type
+                  ya ayni olur yada parent tan secilir, ama primitiveler arasinda parent-child iliskisi olmadigindan parent tan
+                  secmek mevzu bahis olamaz o zaman tek secenek aynisi olmalidir
+                  7)Child'da override edilen methodun return type i ile parent taki methodun return type i arasinda
+                  IS-A ilisikis yoksa return type DEGİSTİRİLEMEZ
+                  Mesela ;
+                  Integer Wrapper classi ile Long Wrapper classi arasinda IS-A iliskisi yoktur o yuzden return type i
+                  degistiremedik
+                  8)Methodun return type i void ise Overriding yaparken return type DEGISTIRILEMEZ
+                  9) static methodlar override edilemezler. Cunku static methodlar tum childlar icin ortak methodlardir
+                  Bir child bir ortak methodu degistirdiginde diger child lar bundan olumsuz etkilenebilir.
+                  Bu yuzden java static methodlarin override edilmesine izin vermez.
+                  10)final methodlar override edilemezler. final methodlarin body si degistirilemez ama Override ederken
+                  method body i degistiririz bu bir celiskidir. Bu yuzden java final methodlarin override edilmesine musade etmez
+                           a) Final keyword unu Variable lar ile kullanabiliriz
+                                i)final variable ise mutlaka deger atanmalıdır
+                                ii) ilk atanan deger degistirilmez
+                           b) Final keyword unu Method lar ile kullanabiliriz
+                                i)method final ise methodun body si degistirilemez
+                                ii) methodun body si degistiriemeyince override yapmak mumkun olmaz
+                           c) Final keyword unu Class lar ile kullanabiliriz
+                                => class final ise O classin child i olamaz
+                  ==>Polymorphism ==> Method Overloading + Method Overriding;
+
+
+C-ENCAPSULATION:Encapsulation ==> kelime anlami itibari ile kapsulleme demektir
+                    Encapsulation Data Hiding (==>Veri saklamak)
+                    Data nasil saklanir?
+                    Acces Modifierlarini private yaparak datayi diger classlardan gorunmez hale getiririm. Boylece datayi saklarim
+
+Encapsulation yaptigimiz data yi istersek diger classlardan okuyabiliriz
+    Nasil okuruz?
+    "get method" olusturarak Encapsulate edilmis datanin degerini okuyabiliriz
+    get method lar public olur
+    get methodun return type i okudugu variable in return type i ile ayni olur
+    get method bir boolean variable icin olusturulduysa eger ismi "is" ile baslar
+
+
+
+
+ D-ABSTRACTION: 1)Eger bir classtan object olusturulmasini istemiyorsak ve bu classi sadece child classlarin
+                    yapmak zorunda olduklari gorevleri belirlemek icin kullaniyorsak "Abstraction" yapariz
+                    2)Bazen parent class daki methodun body si hicbir child class tarafindan kullanilmaz. Bu durumda
+                    parenttaki methoda body yazmak hic kullanilmadigi icin mantikli degildir. Bizde o methoda
+                    body yazmayiz
+                    3)Body si yazilmayan methoda Abstract Method denir. Abstract ingilizcede vucutsuz yada soyut anlamindadir
+                    4)Methodun body sini yazmayinca java bize hata verir, bizde abstract keywordunu kullanarak javaya
+                    bu methodun bodysi olmayacak deriz
+                    5)abstract keywordunu kullaninca elde ettigimiz abstract method normal classlara konulamaz,
+                    o yuzden classi da abstract yapmaliyiz
+                    6)Parent taki method abstract ise butun child classlar o methodu override etmek zorundadir
+                    Bu yuzden tum chidlar icin mecburi olmasini istedigimiz fonksiyonlari abstract yapmak mantikli bir secimdir
+                    7)Body si olan methodlar (concrete method) abstract classlarin icine yazilabilir.
+                    Abstract methodlar concrete classlarin icine yazilamazlar. Concrete Methodlar child classlar tarafindan
+                    override edilmek zorunda degildir.
+                    8) abstract keyword ile method body bir methodda ayni anda kullanilamaz
+                    9)final methodlar abstract olamazlar. final methodlar override edilemezler, halbuki abstract methodlar
+                    override edilmek icin olusturulurlar. Bu celiskidir, bu yüzden java abstract methodlarin final olamasina musade etmez
+                    10)abstract classlarin icinde abstract methodlar olur, obstract methodlar body si olmadigindan
+                    eksik methodlari gibi dusunulebilir
+                    Yani abstract class icinde eksik bir yapi barindirir, siz abstract classdan object uretirseniz abstact class icindeki
+                    eksikiilk object'e yansir.
+                    Java bunu istemez cunku eksik object eksik is yapar buda application'ın yanlis calsimasina sebep olur
+                    javada applicationu korumak icin abstract classlardan object uretilmesini engellemistir
+                    11)abstract classlarin constructorlari vardir ama object olusturamazlar
+                    12)abstract classlarin abstract childi veya concrete childi olabilir
+                    13)abstract methodlar private olamazlar cunku child classlar abstratc methodlari kullanirlar. private yapinca
+                    kullanima kapali olur, bu celiskidir, bu yüzden java abstract methodlarin private olmasina musade etmez.
+NOTE:(interview sorusu hem de)final keyword java da ne ise yarar?
+Final keyword;
+a-variables larda kullanilabilir,
+1-o variables a kesinlikle value atanmalidir.
+2-Ilk atanan value degistirilemez.
+
+
+b-methods da kullanabiliriz;
+1-Final methods da kullanildiginda, o methodun body si degistirilemez,
+body degistirilemedigi icin overriding yapilamaz.
+
+c-class larda kullanilabilir.
+1-Class larda kullanildiginda, o class in child class i olamaz.ama final class in
+kendisi child olabilir.
+
+INTERFACE:
+NOTE:Birden fazla parent class kullanilamaz.yani java multi-parent kullanmaya izin vermez.
+ bu durumu cozmek icin bu class lar interface yapilarak sorun cozulmus olur.
+
+ 1-Bir interface icine concrete method(yani body si olan method) konulamaz.
+2-Interface icindeki methods un abstract oldugunu java bilir. bu nedenle
+interface icindeki abstract methodlarda abstract keyword kullanmaya gerek yoktur.
+3-Interface deki tum methodsun access modifier i tamami public tir. bu yuzden interface icinde
+abstract method olustururken,access modifier yazmaya gerek yoktur.
+4-bir interface i bir concrete class in parent i yapmak istedigimizde,
+"extends" keyword yerine implement keyword kullaniriz.
+5-Concrete(body li)child claass lar parent interface deki abstract methodsu
+override etmek zorundadirlar.
+6-Interface ler bir application daki yapilmasi zorunlu isleri barindirirlar.
+Yani to do list function lari barindirirlar. Bu yuzden to do list de denir.
+7-interface icinde birden fazla parent interface icinde ayni isimli abstract
+method olusturulabilir.Abstract methodsun body si olmadigi icin,child
+classlar bunlardan birini override edip kullanabilirler.Ancak bunlarin return
+type lari da ayni olmalidir.
+8-Kural olarak interface icinde concrete(bodysi) olan method koyamayiz.
+Bunu java cozmus ve interface icine body li method olusturmayi saglamistir.
+"default" keyword u kullanarak concrete method interface icinde olusturabiliriz.
+Bu access modifier degil, cunku deafult access modifier zaten
+ yazilmaz.Burdaki concrete method keywordu dur.Asagidaki gibi.
+
+        default void eco(){
+        System.out.println("uses gas less...");
+
+9-Ikinci yol concrete method yapmak icin "static" keyword u kullanmaktir.
+
+        static void stop(){
+      }
+10-Default veye static keywordu kullanarak olusturdugumuz concrete methodsun
+concrete child classlar tarafindan kullanilma zorunlulugu yoktur.
+11-Default keywordunu kullanarak olusturdugumuz concrete methodslara object
+olusturarak ulasilabilir.Ancak static keywordu kullanarak olusturdugumuz
+concrete methodslara ulasmak icin object olusturmaya gerek yoktur. interface
+ismi yeterlidir.
+12-Interface lerin constructor u yoktur.
+
+1- child class==>class:extends yani child class i parent classin child i yaparken extends
+2-interface==>interface:extends-interface i interface child i yaparken extends
+3-class==>interface:implements child class i interface in child i yaparken implements keyword yazariz.
+
+yani ayni ise extends farkli ise implements kullanilir.
+
+!!!!:bir interface de abstract method olusturdugumuzda, child class lara gidip bu methodu
+override etmek zorundayiz. yoksa app hata verir.
+
+VARIABLES:
+1- Inteface deki tum variables otomatik olarak final dir. Bu yuzden interface icindeki
+ variable i olusturdugumuzda mutlaka deger assign etmeliyiz.
+2-Bilindigi gibi final variables in degeri degistirilemez.
+3-interface deki tum variables default olarak public dir.
+4-Interface deki tum variables default olarak "static" dir.
+5-Interfaces de variables interface ismi ile cagrilir,bu hem static variable olmanin
+hem de okunurluluk acisindan onemlidir.
+
+!!!!:INTERVIEW SORUSU:ABSTRACT CLASS ILE INTERFACE ARASINDAKI FARKLAR
+ 1- abstract classes hem abstract hem de concrete methods icerebilir,ama interfaces sadece
+ abstract method icerir. Interfaces de istersek default ve static keywords kullanarak
+ concrete method olusturabiliriz.
+ 2- Abstract classes multi-inheritance yi desteklemez ama interface destekler.
+ 3-Abstraact classes icinde her turlu variable olusturulabilir. Ancak interface icinde
+ ki variables public,static ve final olmak zorundadir.
+ 4-interface class in child i olamaz ama abstract  class in child i olabilir.
+ 5-Abstract classes de constructor vardir ama object uretemez,interface lerde
+ constructor yoktur onun icin object uretemez.
+
+ NOTE:parent child iliskisi varsa method cagirirken class ismi yazilmadan da cagrilabilir.
+
+IntStream. yapinca methodlari gorduk. rangeClosed methodunu sectik. Cunku ilk sayi dahil, ikinci sayi haric olacak.
+method parantezi icine starting, ending yazdik.
+Boylece eger 7 ve 10 sayisi verilirse 7 dahil, 10 dahil olur. Eger rangeClosed yerine range methodunu secseydik 10 haric olacakti.
+
+Java'da, rangeClosed() ve range() metotları IntStream, LongStream ve DoubleStream interface'leri tarafından sağlanan, belirli bir aralıkta değerler üreten metotlardir.
+
+rangeClosed(int startInclusive, int endInclusive) metodu, startInclusive ile endInclusive arasındaki
+tam sayıları içeren bir akım üretir. Örneğin, IntStream.rangeClosed(7, 10) metodu, 7, 8, 9 ve 10 değerlerini içeren bir stream üretir.
+
+range(int startInclusive, int endExclusive) metodu, startInclusive ile endExclusive arasındaki
+tam sayıları içeren bir akım üretir. Ancak, endExclusive parametresi dahil edilmez.
+Örneğin, IntStream.range(7, 10) metodu, 7, 8 ve 9 değerlerini içeren bir stream üretir.
+
+Bu nedenle, rangeClosed() ve range() arasındaki temel fark, rangeClosed() metodu ile belirtilen
+aralığın uç noktalarının dahil edilip edilmediğidir. rangeClosed() metodu, aralığın her iki
+uç noktasını da dahil ederken, range() metodu ikinci parametre olarak belirtilen uç noktasını dahil etmez.
+
+Bu nedenle, eğer uç noktaları da aralığa dahil etmek istiyorsanız, rangeClosed() metodunu kullanmalısınız.
+Eğer uç noktaları dahil etmek istemiyorsanız, range() metodunu kullanmalısınız.
+Örneğinizde, range() metodu ile 7 ve 10 parametreleri kullanılırsa, sonuçta elde edilecek stream
+7, 8 ve 9 değerlerini içerecektir, ancak 10 değerini içermeyecektir. Aynı parametrelerle rangeClosed() metodu kullanılırsa, elde edilecek stream 7, 8, 9 ve 10 değerlerini içerecektir.
+
+
+
+
+
+
+
+
